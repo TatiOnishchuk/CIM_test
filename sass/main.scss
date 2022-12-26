@@ -1,0 +1,171 @@
+@import "./base/base";
+@import "./base/reset";
+
+.table__row{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $border-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .table__card{
+        display: grid;
+        grid-template-rows: 12% 88%;
+        .table__title{
+            background-color: #0D274D;
+            padding: 15px;
+            .title{
+                font-size: 16px;
+                line-height: 22px;
+                font-family: $box-title-font;
+                color: #fff;
+                text-align: center;
+                @include tablet(768px);
+            }
+        }
+        .table__title-mid{
+            border-right: 1px solid $light-border;
+            border-left: 1px solid $light-border;
+
+        }
+        .table__descr{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 4fr 6fr 1fr 5fr 3fr;
+            row-gap: 0;
+            align-items: center;
+            padding: 14px 16px 17px;
+            .descr-points{
+                grid-row: 1;
+                -ms-grid-row: 1;
+                align-self: baseline;
+                .point{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    margin-bottom: 10px;
+                    color: #000;
+                    text-align: start;
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                    img{
+                        margin-right: 12px;
+                    }
+                    .point-text{
+                        font-size: 15px;
+                        @include tablet(768px);
+                    }
+                }
+                
+            }
+            .table__pricebox{
+                grid-row: 2;
+                -ms-grid-row: 2;
+                text-align: center;
+                .price-name{
+                    font-weight: 700;
+                    font-size: 15px;
+                    @include tablet(768px);
+                }
+                .price{
+                    font-size: 14px;
+                    line-height: 26px;
+                    margin-top: 4px;
+                    @include tablet(768px);
+                    .nums{
+                        font-weight: 900;
+                        font-size: 20px;
+                        color: $green-color;
+                    }
+                }
+            }
+            .table__divisor{
+                grid-row: 3;
+                -ms-grid-row: 3;
+                max-width: 238px;
+                width: 100%;
+                background-color: $blue-color;
+                color: $blue-color;
+                height: 1px;
+                border: none;
+                margin: 0 auto;
+            }
+            .table__depthbox{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                grid-row: 4;
+                -ms-grid-row: 4;
+                max-height: 90px;
+                height: 100%;
+                text-align: start;
+                .depth-point{
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                    @include tablet(768px);
+                    img{
+                        margin-right: 1vw;
+                    }
+                    a{
+                        transition: 0.5s;
+                    }
+                    a:hover{
+                        text-decoration: none;
+                        color: $blue-color;
+                    }
+                }
+            }
+            .table__button{
+                grid-row: 5;
+                -ms-grid-row: 5;
+                text-align: center;
+                max-width: 250px;
+                width: 100%;
+                background-color: $blue-color;
+                padding: 12px;
+                margin: 0 auto;
+                border-radius: 6px;
+                transition: 0.5s;
+                .btn-more{
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: #fff;
+                    @include tablet(768px);
+                }
+                &:hover{
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
+    }
+    .table__card_sand{
+        max-width: 283px;
+        width: 100%;
+        .price-name{
+            margin-bottom: 8px;
+        }
+    }
+    .table__card_artesian{
+        max-width: 318px;
+        width: 100%;
+        .table__descr{
+            border-right: 1px solid $border-color;
+            border-left: 1px solid $border-color;
+            padding-left: 15px;
+            padding-right: 15px;
+            .table__depthbox{
+                max-height: 80px;
+            }
+        }
+    }
+    .table__card_mgbu{
+        max-width: 325px;
+        width: 100%;
+        .table__pricebox_sand{
+            margin-top: 14px;
+        }
+    }
+}
+
+// Breakpoins
+@import "./base/media";

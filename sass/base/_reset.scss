@@ -1,0 +1,20 @@
+// RESET.CSS
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+a{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: inherit;
+}
